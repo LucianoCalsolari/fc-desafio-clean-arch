@@ -5,8 +5,8 @@ const product = new Product("1", "Product 1", 1);
 
 const input = {
   id: product.id,
-  name: product.name,
-  price: product.price
+  name: "Product new",
+  price: 3
 };
 
 const MockRepository = () => {
@@ -26,7 +26,7 @@ describe("Unit test for product update use case", () => {
     const output = await productUpdateUseCase.execute(input);
 
     expect(input.id).toBe(output.id);
-        expect(input.name).toBe(output.name);
-        expect(input.price).toBe(output.price);
+    expect(input.name).toBe(output.name);
+    expect(input.price).toBe(output.price);
   });
 });
